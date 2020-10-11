@@ -1,0 +1,69 @@
+
+{% extends 'base2.html'%}
+
+
+
+{% load static %}
+
+{% block content %}
+
+    <div class="row row-cols-1 row-cols-md-3">
+<p>
+ <h2> Fashion Designer Details</h2>
+</p>
+
+
+
+
+
+    <br><br><br><br>
+
+
+
+
+
+
+
+     {% for f_d in Fashion_Designer %}
+        <div class="col mb-4">
+
+            <div class="card h-100" >
+
+
+
+              <div class="card-body">
+
+                <h5 class="card-title">{{ f_d.Name }}<br></h5>
+
+                <p class="card-text">
+
+                 Fashion Designer Info <br>
+
+                              {{ f_d.Address}}<br>
+                             {{ f_d.Email }}<br>
+                             {{ f_d.Phn_no }}
+
+
+                </p>
+
+
+
+              </div>
+
+                 <a class="nav-link" href="{% url 'Product'  %}" >
+                       <button type="button" class= "btn btn-outline-primary">Home</button></a>
+
+
+
+            </div>
+        </div>
+
+
+        <br><br>
+    {% endfor %}
+    </div>
+
+
+{% endblock content %}
+
+

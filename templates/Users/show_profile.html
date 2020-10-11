@@ -1,0 +1,59 @@
+{% extends 'base2.html'%}
+
+
+
+{% load static %}
+
+{% block content %}
+
+    <div class="row row-cols-1 row-cols-md-3">
+<p>
+ <h2> Profile Details</h2>
+</p>
+
+
+    <br><br><br><br>
+
+
+
+        <div class="col mb-4">
+
+            <div class="card h-100" >
+
+
+
+              <div class="card-body">
+
+                <h5 class="card-title">{{ profile.user.username }}<br></h5>
+
+                <p class="card-text">
+
+                    Profile Info <br>
+  <table>
+        <tr><td>{{ profile.id }}</td></tr>
+        <tr><td>{{ profile.contact_no }}</td></tr>
+        <tr><td><img src="{{ profile.pro_pic.url }}" height="200" width="200"></td></tr>
+
+    </table>
+
+                </p>
+
+
+              </div>
+                <div class="card-footer">
+                    <a href="{% url 'Customer' %}" class="btn btn-primary">Customer list</a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <br><br>
+
+    </div>
+
+
+{% endblock content %}
+
+

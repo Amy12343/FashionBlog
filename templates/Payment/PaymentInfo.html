@@ -1,0 +1,69 @@
+
+{% extends 'base2.html'%}
+
+
+
+{% load static %}
+
+{% block content %}
+
+    <div class="row row-cols-1 row-cols-md-3">
+<p>
+ <h2> Payment Details</h2>
+</p>
+
+
+
+
+
+    <br><br><br><br>
+
+
+
+
+
+
+
+     {% for p in Payment %}
+        <div class="col mb-4">
+
+            <div class="card h-100" >
+
+
+
+              <div class="card-body">
+
+                <h5 class="card-title">{{ p.payment_type  }}<br></h5>
+
+                <p class="card-text">
+
+                    Payment Info <br>
+
+                             {{ p.payment_Id }}<br>
+                             {{ p.amount}}
+
+
+
+
+
+                </p>
+
+
+
+
+              </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn"></a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <br><br>
+    {% endfor %}
+    </div>
+
+
+{% endblock content %}

@@ -1,0 +1,67 @@
+{% extends 'base2.html'%}
+
+
+
+{% load static %}
+
+{% block content %}
+
+    <div class="row row-cols-1 row-cols-md-3">
+<p>
+ <h2> Users Details</h2>
+</p>
+
+
+
+
+
+    <br><br><br><br>
+
+
+
+
+
+
+
+     {% for c in Customer %}
+        <div class="col mb-4">
+
+            <div class="card h-100" >
+
+
+
+              <div class="card-body">
+
+                <h5 class="card-title">{{ c.Name }}<br></h5>
+
+                <p class="card-text">
+
+                    Profile Info <br>
+
+                             {{ c.Email}}<br>
+                           {{ c.Address }}<br>
+                           {{ c.phone_No }}<br>
+                           {{ c.Status }}<br>
+
+
+                </p>
+
+
+
+              </div>
+                <a class="nav-link" href="{% url 'Product'  %}" >
+                       <button type="button" class= "btn btn-outline-primary">Home</button></a>
+
+
+            </div>
+        </div>
+
+
+        <br><br>
+    {% endfor %}
+    </div>
+
+
+{% endblock content %}
+
+
